@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    background-color:#fff;
+    color: #333;
+    height: 100%;
+    padding-top: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #333;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333; 
+}
+
+.profile h2 {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+}
+
+.profile .name {
+    color: #218feb;  /* Highlight color for name */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+    position: relative; /* Relative positioning for arrow */
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #218feb;
+}
+
+
+/* Arrow indicator styles */
+.sidebar ul li.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 75%; /* Adjust the position of the arrow */
+    transform: translateY(-50%) rotate(45deg); /* Rotate the arrow */
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 2px 2px 0 0; /* Adjust size and direction */
+    border-color: #333;
+}
+
+
+.resume-button {
+    display: block;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 40%;
+    border-color: #fff;
+    font-size: 13px;
+}
+
+.resume-button:hover {
+    background-color: #218feb;
+}
+
+.contact-info {
+    margin-top: auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.contact-info a i {
+    margin-right: 10px;
+}
+
+.contact-info a:hover {
+    color: #218feb;
+}
+
+.main-content {
+    margin-left: 300px;
+    padding: 20px;
+    flex-grow: 1;
+    background-image: radial-gradient(#fff 10%, rgb(190, 195, 199) 15%, #fff 75%);
+}
+
+section {
+    height: 100%;
+}
+
+/* About section styling */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-container .box {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.about-container .top-box {
+    flex-basis: 100%;
+}
+
+.about-container .bottom-box {
+    flex-direction: column;
+}
+
+.bottom-box .school {
+    font-weight: bold;
+}
+
+/* PROJECT */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+    height: auto;
+}
+
+#projects h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    width: calc(33.33% - 20px); /* Three projects per row */
+    height: 250px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.project-image {
+    height: 200px; /* Adjust height of image area */
+    background-size: cover;
+    background-position: center;
+}
+
+.project-details {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 5px 5px; /* Rounded corners at bottom */
+}
+
+.project h2 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.project p {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 12px;
+    flex: 1;
+}
+
+.project:hover{
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px); /* Two projects per row on smaller screens */
+    }
+}
+
+
+
+
+/* CERTIFICATE */
+#cert {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.certificate {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.embed-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+}
+
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
