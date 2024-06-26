@@ -655,15 +655,21 @@ section {
 
 /* CERTIFICATE */
 #cert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Make sure the section takes the full height */
     padding: 50px 20px;
     text-align: center;
 }
 
 .certificate {
     margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -679,5 +685,17 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+}
+
+@media screen and (max-width: 1024) {
+    #cert {
+        height: 300px; /* Make sure the section takes the full height */
+        padding: 30px 10px;
+    }
+    
+    .certificate {
+        padding: 5px;
+        width: 100%;
+        height: 100%;
+    }
 }
