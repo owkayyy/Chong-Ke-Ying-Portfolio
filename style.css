@@ -263,7 +263,7 @@ section {
 }
 
 
-.work-container .work-box {
+.work-box {
     flex-basis: 60%;
     height: auto;
     padding: 20px;
