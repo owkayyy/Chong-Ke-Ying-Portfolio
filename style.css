@@ -31,8 +31,8 @@ body {
 
 .profile img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     border: 2px solid #333; 
 }
 
@@ -59,6 +59,7 @@ body {
 
 .sidebar ul li a {
     color: #333;
+    font-size: 16px;
     text-decoration: none;
     display: block;
 }
@@ -80,6 +81,98 @@ body {
     border-style: solid;
     border-width: 2px 2px 0 0; /* Adjust size and direction */
     border-color: #333;
+}
+@media screen and (min-width: 1440px){
+    .profile img {
+        width: 200px;
+        height: 200px;
+    }
+    .profile h2{
+        font-size: 26px;
+    }
+
+    .sidebar {
+        width: 400px;
+    }
+    .sidebar ul li a{ 
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+    .profile h2{
+        font-size: 18px;
+    }
+    .sidebar ul li{
+        padding: 10px 15px;
+    }
+    .sidebar ul li a{ 
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+   .sidebar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transition: left 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    .sidebar.offscreen {
+        left: -100%;
+    }
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .hamburger-icon:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-icon:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .hamburger-icon.active:nth-child(1) {
+        transform: none;
+    }
+
+    .hamburger-icon.active:nth-child(2) {
+        opacity: 1;
+    }
+
+    .hamburger-icon.active:nth-child(3) {
+        transform: none;
+    }
 }
 
 
@@ -126,13 +219,41 @@ body {
 
 .main-content {
     margin-left: 300px;
-    padding: 20px;
+    padding: 50px;
     flex-grow: 1;
 }
-
 section {
-    height: 100%;
     background-image: radial-gradient(#fff 10%, rgb(190, 195, 199) 15%, #fff 75%);
+}
+@media screen and (min-width: 1440px){
+    .main-content {
+        margin-left: 400px;
+    }
+    .resume-button {
+        font-size: 20px;
+    }
+    .contact-info {
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 1024px){
+    .resume-button {
+        font-size: 12px;
+    }
+    .contact-info {
+        font-size: 10px;
+    }
+    .contact-info a {
+        padding: 5px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
 }
 
 /* About section styling */
@@ -149,6 +270,16 @@ section {
     border-radius: 5px;
     text-align: center;
     flex-grow: 1;
+    justify-items: center;
+}
+
+.education-table {
+    margin: 0 auto; /* Auto margin to center the table horizontally */
+    text-align: left; /* Align text inside table cells to the left */
+}
+
+.education-table td {
+    padding: 5px 10px; /* Adjust padding for table cells */
 }
 
 .about-container .top-box {
@@ -161,6 +292,68 @@ section {
 
 .bottom-box .school {
     font-weight: bold;
+}
+@media screen and (min-width: 1440px) {
+    .about-container h1{
+        font-size: 28px;
+    }
+    .about-container p {
+        font-size: 20px;
+    }
+    .education-table {
+        font-size: 20px;
+    }
+    .bottom-box li {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .about-container h1{
+        font-size: 20px;
+    }
+    .about-container p {
+        font-size: 14px;
+    }
+    .education-table {
+        font-size: 14px;
+    }
+    .bottom-box li {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .about-container .box {
+        padding: 10px;
+    }
+    .about-container h1{
+        font-size: 20px;
+    }
+    .about-container p {
+        font-size: 12px;
+    }
+    .education-table {
+        font-size: 12px;
+    }
+    .bottom-box li {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 768px)  {
+    .about-container .box {
+        padding: 10px;
+    }
+    .about-container h1{
+        font-size: 16px;
+    }
+    .about-container p {
+        font-size: 12px;
+    }
+    .education-table {
+        font-size: 12px;
+    }
+    .bottom-box li {
+        font-size: 12px;
+    }
 }
 
 /* PROJECT */
@@ -237,10 +430,95 @@ section {
 .project:hover{
     transform: scale(1.1); 
 }
-
-@media (max-width: 768px) {
+@media screen and (min-width: 1440px) {
+    #projects h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .project h2 {
+        font-size: 24px;
+    }
+    
+    .project p {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
     .project {
-        width: calc(50% - 20px); /* Two projects per row on smaller screens */
+        width: calc(33.33% - 20px); /* Three projects per row */
+        height: 380px;
+        margin-bottom: 20px;
+    }
+    
+    .project-image {
+        height: 250px; /* Adjust height of image area */
+    }
+}
+@media screen and (max-width: 1024px) {
+    #projects h1 {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+    .project h2 {
+        font-size: 16px;
+    }
+    
+    .project p {
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+    .project {
+        width: calc(33.33% - 20px); /* Three projects per row */
+        height: 270px;
+        margin-bottom: 15px;
+    }
+    
+    .project-image {
+        height: 250px; /* Adjust height of image area */
+    }
+}
+@media screen and (max-width: 480px)  {
+    .project {
+        width: calc(50% - 20px); /* Three projects per row */
+        height: 250px;
+    }
+    #projects h1 {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+    .project h2 {
+        font-size: 12px;
+    }
+    
+    .project p {
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+    
+    .project-image {
+        height: 130px; /* Adjust height of image area */
+    }
+}
+
+@media screen and (max-width: 360px)  {
+    .project {
+        width: calc(100% - 20px); /* Three projects per row */
+        height: 250px;
+    }
+    #projects h1 {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+    .project h2 {
+        font-size: 12px;
+    }
+    
+    .project p {
+        margin-bottom: 5px;
+        font-size: 8px;
+    }
+    
+    .project-image {
+        height: 130px; /* Adjust height of image area */
     }
 }
 
@@ -294,7 +572,30 @@ section {
     font-size: 16px;
     color: #666;
 }
-
+@media screen and (min-width: 1440px)  {
+    #work h1 {
+        font-size: 26px;
+    }
+    .work-box h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    
+    .work-box p {
+        color: #666;
+        font-size: 20px;
+    }
+    .work-box li{
+        font-size: 20px;
+        color: #666;
+    }
+    .work-box a {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 22px;
+        color: #666;
+    }
+}
 @media (max-width: 768px) {
     .work-box {
         width: calc(50% - 20px); /* Adjust for smaller screens */
@@ -302,12 +603,54 @@ section {
 }
 
 @media (max-width: 480px) {
-    .work-box {
-        width: 100%; /* Full width for very small screens */
+    #work h1 {
+        font-size: 18px;
+    }
+    .work-box h2 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    
+    .work-box p {
+        color: #666;
+        font-size: 10px;
+    }
+    .work-box li{
+        font-size: 10px;
+        color: #666;
+    }
+    .work-box a {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 10px;
+        color: #666;
     }
 }
 
-
+@media screen and (max-width: 360px)  {
+    #work h1 {
+        font-size: 18px;
+    }
+    .work-box h2 {
+        font-size: 14px;
+        margin-top: 0;
+    }
+    
+    .work-box p {
+        color: #666;
+        font-size: 10px;
+    }
+    .work-box li{
+        font-size: 10px;
+        color: #666;
+    }
+    .work-box a {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 10px;
+        color: #666;
+    }
+}
 
 
 /* CERTIFICATE */

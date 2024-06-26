@@ -14,14 +14,18 @@
                 <img src="profile.jfif" alt="Profile Picture">
                 <h2>Hi, I am <span class="name">Chong Ke Ying</span></h2>
             </div>
+            <div class="hamburger-menu" onclick="toggleSidebar()">
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+                <div class="hamburger-icon"></div>
+            </div>
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#work">Work Experiences</a></li>
                 <li><a href="#cert">Certificate</a></li>
             </ul>
-            <div class="resume-info"></div>
-            <a class="resume-button" onclick="window.open('ChongKeYing_Resume.pdf')">
+            <a class="resume-button" onclick="window.open('ChongKeYing_Resume.pdf')" style="cursor: pointer;">
                 <i class="fas fa-download"></i> Download CV
             </a>
             <div class="contact-info">
@@ -40,6 +44,16 @@
             </div>
             
         </nav>
+
+        <script>
+            function toggleSidebar() {
+                const sidebar = document.querySelector('.sidebar');
+                const hamburgerIcons = document.querySelectorAll('.hamburger-icon');
+                sidebar.classList.toggle('offscreen');
+                hamburgerIcons.forEach(icon => icon.classList.toggle('active'));
+            }
+        </script>
+
         <div class="main-content">
             <section id="about">
                 <div class="about-container">
@@ -50,41 +64,44 @@
                     </div>
                     <div class="box bottom-box">
                         <h1>Education</h1>
-                        <table>
+                        <table class="education-table">
                             <tr>
-                              <td>2024</td>
-                            </tr>
-                            <tr>
-                              <td>|</td>
-                              <td><span class="school">Universiti Tunku Abdul Rahman (UTAR) </span>
-                                <br>Bachelor of Science (Honours) Applied Mathematics with Computing
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>2021</td>
+                                <td>2024</td>
                             </tr>
                             <tr>
                                 <td>|</td>
-                                <td><span class="school">Universiti Tunku Abdul Rahman (UTAR) </span>
-                                  <br>Foundation in Science
+                                <td>
+                                    <span class="school">Universiti Tunku Abdul Rahman (UTAR)</span>
+                                    <br>Bachelor of Science (Honours) Applied Mathematics with Computing
                                 </td>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
+                                <td>2021</td>
+                            </tr>
+                            <tr>
+                                <td>|</td>
+                                <td>
+                                    <span class="school">Universiti Tunku Abdul Rahman (UTAR)</span>
+                                    <br>Foundation in Science
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>2020</td>
-                              </tr>
-                              <tr>
+                            </tr>
+                            <tr>
                                 <td>2019</td>
-                              </tr>
-                              <tr>
-                                  <td>|</td>
-                                  <td><span class="school">Tsun Jin High School </span>
+                            </tr>
+                            <tr>
+                                <td>|</td>
+                                <td>
+                                    <span class="school">Tsun Jin High School</span>
                                     <br>SPM, UEC
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td>2014</td>
-                                </tr>
-                          </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2014</td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="box bottom-box">
                         <h1>Skills</h1>
