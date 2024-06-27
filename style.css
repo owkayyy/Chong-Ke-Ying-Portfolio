@@ -677,48 +677,91 @@ section {
 
 
 /* CERTIFICATE */
+/* Hide button by default */
 #cert {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px; /* Make sure the section takes the full height */
-    padding: 50px 20px;
-    text-align: center;
+    background-image: radial-gradient(#fff 1%, rgb(190, 195, 199) 15%, #fff 84%);
 }
-
-.certificate {
-    margin-bottom: 30px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#cert-button {
+    display: none;
 }
-
-
-.embed-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+#cert p {
+    display: none;
 }
-
-.embed-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-@media screen and (max-width: 1024) {
+@media (min-width: 768px) {
     #cert {
-        height: 300px; /* Make sure the section takes the full height */
-        padding: 30px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px; /* Make sure the section takes the full height */
+        padding: 50px 20px;
+        text-align: center;
     }
-    
+
     .certificate {
-        padding: 5px;
+        margin-bottom: 30px;
         width: 100%;
         height: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .embed-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 aspect ratio (adjust as needed) */
+    }
+
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* Show button and hide embed on mobile devices */
+@media (max-width: 768px) {
+    #cert {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Make sure the section takes the full height */
+        padding: 20px 5px;
+        text-align: center;
+    }
+    #cert p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .certificate {
+        margin-bottom: 30px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .certificate embed {
+        display: none;
+    }
+
+    #cert-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 2px solid #333; 
+        color: #333;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
     }
 }
