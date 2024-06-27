@@ -392,7 +392,33 @@ section {
     background-size: cover;
     background-position: center;
 }
-
+.project-pm {
+    padding: 5px;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgb(243, 202, 125);
+    color: #fff;
+    border-radius: 3px;
+}
+.project-web {
+    padding: 10px;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgb(158, 247, 217);
+    color: #fff;
+    border-radius: 3px;
+}
+.project-app {
+    padding: 10px;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgb(218, 180, 240);
+    color: #fff;
+    border-radius: 3px;
+}
 .project-details {
     position: absolute;
     flex-direction: column;
