@@ -184,7 +184,7 @@ body {
     padding-bottom: 50px;
     text-align: center;
     width: 100%;
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .contact-info a {
@@ -217,7 +217,7 @@ section {
         font-size: 12px;
     }
     .contact-info {
-        font-size: 10px;
+        font-size: 14px;
     }
     .contact-info a {
         padding: 5px 0;
