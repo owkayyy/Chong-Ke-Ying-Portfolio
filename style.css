@@ -32,8 +32,8 @@ body {
 
 .profile img {
     border-radius: 50%;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
     border: 2px solid #333; 
 }
 
@@ -54,13 +54,13 @@ body {
 }
 
 .sidebar ul li {
-    padding: 15px 20px;
+    padding: 10px 15px;
     position: relative; /* Relative positioning for arrow */
 }
 
 .sidebar ul li a {
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     display: block;
 }
@@ -83,22 +83,7 @@ body {
     border-width: 2px 2px 0 0; /* Adjust size and direction */
     border-color: #333;
 }
-@media screen and (min-width: 1440px){
-    .profile img {
-        width: 200px;
-        height: 200px;
-    }
-    .profile h2{
-        font-size: 26px;
-    }
 
-    .sidebar {
-        width: 400px;
-    }
-    .sidebar ul li a{ 
-        font-size: 24px;
-    }
-}
 @media screen and (max-width: 1024px){
     .profile img {
         width: 100px;
@@ -111,7 +96,7 @@ body {
         padding: 10px 15px;
     }
     .sidebar ul li a{ 
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -199,7 +184,7 @@ body {
     padding-bottom: 50px;
     text-align: center;
     width: 100%;
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .contact-info a {
@@ -207,7 +192,7 @@ body {
     text-decoration: none;
     display: block;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 .contact-info a i {
@@ -225,18 +210,6 @@ body {
 }
 section {
     background-image: radial-gradient(#fff 10%, rgb(190, 195, 199) 15%, #fff 75%);
-}
-@media screen and (min-width: 1440px){
-    .main-content {
-        margin-left: 400px;
-    }
-    .resume-button {
-        font-size: 20px;
-    }
-    .contact-info {
-        font-size: 18px;
-    }
-
 }
 
 @media screen and (max-width: 1024px){
